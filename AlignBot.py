@@ -75,7 +75,7 @@ def run_bot(r):
                     blacklist.append(submission)
                     with open("blacklist.txt", "a") as f:
                         f.write(str(submission) + "\n")
-                        f.close()
+                        # f.close()
 
                     time.sleep(config.wait_time)
                     run_bot(r)
@@ -134,11 +134,11 @@ def outriders(r):
                     blacklist.append(submission)
                     with open("blacklist.txt", "a") as f:
                         f.write(str(submission) + "\n")
-                        f.close()
+                        # f.close()
 
                     time.sleep(config.wait_time)
-                    print('Functions are calling themselves every 3 mins')
-                    outriders(r)
+                    # print('Functions are calling themselves every 3 mins')
+                    # outriders(r)
 
 
 def blacklisted_posts():
@@ -148,7 +148,7 @@ def blacklisted_posts():
         with open("blacklist.txt", "r") as f:
             blacklist = f.read()
             blacklist = blacklist.split("\n")
-            f.close()
+            # f.close()
 
     return blacklist
 
@@ -158,5 +158,10 @@ blacklist = blacklisted_posts()
 while True:
     print('is this looping?')
     run_bot(r)
+    print('run_bot')
     outriders(r)
-    client.run(token)
+    print('outriders')
+    time.sleep(60)
+    print('we sleepy')
+    # client.run(token)
+    True
