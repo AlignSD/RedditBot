@@ -156,12 +156,7 @@ def blacklisted_posts():
 blacklist = blacklisted_posts()
 
 while True:
-    print('is this looping?')
     run_bot(r)
-    print('run_bot')
     outriders(r)
-    print('outriders')
     time.sleep(60)
-    print('we sleepy')
-    # client.run(token)
     True
