@@ -28,7 +28,7 @@ def run_bot(r):
         for submission in submissions:
             if submission not in blacklist:
                 if submission.is_self == False and submission.is_video == False:
-                    if submission.score > 100:
+                    if submission.score > 500:
                         data = {}
                         data["embeds"] = []
                         embed = {
@@ -88,7 +88,7 @@ def outriders(r):
         for submission in submissions:
             if submission not in blacklist:
                 if submission.is_self == False and submission.is_video == False:
-                    if submission.score > 100:
+                    if submission.score > 200:
                         data = {}
                         data["embeds"] = []
                         embed = {
